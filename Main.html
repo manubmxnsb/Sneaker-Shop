@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test</title>
+    <link rel="stylesheet" href="Main.css">
+</head>
+
+</html>
+<header>
+    <nav class="Header">
+        <div class="logo">
+            <img src="Assets/Logo_1.jpg" alt="CompanyLogo" width="7%">
+            <div class="logo text">SNEAKERSHOP</div>
+        </div>
+        <ul class="nav-links">
+
+            <!-- NAVIGATION MENUS -->
+            <div class="menu">
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#AboutUs">ABOUT</a></li>
+                <li><a href="#Products">PRODUCTS</a></li>
+                <li><a href="#ContactSec">CONTACT US</a></li>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+<body>
+    <!-- Automated slider -->
+    <section id="Home">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1">
+                <input type="radio" name="radio-btn" id="radio2">
+                <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
+                <div class="slide first">
+                    <img src="Assets/Shoe_1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="Assets/Shoe_2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="Assets/Shoe_3.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="Assets/Shoe_4.jpg" alt="">
+                </div>
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+            </div>
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function () {
+                document.getElementById('radio' + counter).checked = true;
+                counter++;
+                if (counter > 4) {
+                    counter = 1;
+                }
+            }, 4000);
+        </script>
+        <!-- About us section -->
+        <section id="AboutUs">
+            <div class="AboutUs">
+                <div class="AboutUs_Left">
+                    <div class="AboutUs_Title">ABOUT US</div>
+                    <div class="AboutUs_Body">
+                        <h1>Helping athletes succeed through innovation & cutting-edge technology.</h1>
+                        <h4>Sports have become more popular as we grow. We take care of your needs by constantly asking
+                            &
+                            getting
+                            the feedback needed to provide you with the best sports shoes. We strive through excellent
+                            customer
+                            experience.</h4>
+                    </div>
+                    <button type="button" class="AboutUs_button">Write to us</button>
+                </div>
+                <div class="AboutUs_Right">
+                    <img src="Assets/aboutus_logo.png" alt="" width=100%>
+                </div>
+            </div>
+        </section>
+        <!-- PRODUCT LIST -->
+        <script src="https://kit.fontawesome.com/c404c70ae7.js" crossorigin="anonymous"></script>
+        <section id="Products">
+            <div class="product_list">
+                <div class="product">
+                    <img src="Assets/Felipe1.jpg" width="90%">
+                    <div class="product_details">
+                        <div class="description">
+                            <p>Orange Running Nike I</p>
+                            <span> 110.00$</span>
+                        </div>
+                        <div class="heart">
+                            <button onclick="Toggle1()" id="hb" class="heart_btn">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="Assets/Felipe2.jpg" width="90%">
+                    <div class="product_details">
+                        <div class="description">
+                            <p>Orange Running Nike II</p>
+                            <span> 129.99$</span>
+                        </div>
+                        <div class="heart">
+                            <button onclick="Toggle2()" id="hb2" class="heart_btn">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="Assets/Felipe3.jpg" width="90%">
+                    <div class="product_details">
+                        <div class="description">
+                            <p>Orange Running Nike III</p>
+                            <span> 149.99$</span>
+                        </div>
+                        <div class="heart">
+                            <button onclick="Toggle3()" id="hb3" class="heart_btn">
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+            var heart_button = document.getElementById('hb')
+            function Toggle1() {
+                if (heart_button.style.color == "red") {
+                    heart_button.style.color = "grey"
+                }
+                else {
+                    heart_button.style.color = "red"
+                }
+            }
+            var heart_button2 = document.getElementById('hb2')
+            function Toggle2() {
+                if (heart_button2.style.color == "red") {
+                    heart_button2.style.color = "grey"
+                }
+                else {
+                    heart_button2.style.color = "red"
+                }
+            }
+            var heart_button3 = document.getElementById('hb3')
+            function Toggle3() {
+                if (heart_button3.style.color == "red") {
+                    heart_button3.style.color = "grey"
+                }
+                else {
+                    heart_button3.style.color = "red"
+                }
+            }
+        </script>
+        <section id="ContactSec">
+            <div class="ContactUs_Section">
+                <div class="Quote_Text">
+                    <div class="Quote_Title">
+                        <h1>Fill the form</h1>
+                    </div>
+                    <div class="Quote_Body">
+                        <h4>and get your custom offer on mail!</h4>
+                    </div>
+                </div>
+                <div class="Form">
+                    <div class="inputbox">
+                        <input type="name" required><label for="">Full Name</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" required><label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="Phone" required><label for="">Phone</label>
+                    </div>
+                    <textarea rows="10" cols="40" name="Quote_TextArea" form="Form">
+            </textarea>
+                    <div class="form_dropdown">
+                        <div class="form_select">
+                            <span class="form_selected">Inquiry type</span>
+                            <div class="form_caret"></div>
+                        </div>
+                        <ul class="form_menu">
+                            <li class="form_active">Custom product</li>
+                            <li>Ask a question</li>
+                            <li>Contact support</li>
+                            <li>Preorder releases</li>
+                        </ul>
+                    </div>
+                    <script>
+                        const form_dropdowns = document.querySelectorAll('.form_dropdown');
+                        form_dropdowns.forEach(form_dropdown => {
+                            const form_select = form_dropdown.querySelector('.form_select');
+                            const form_caret = form_dropdown.querySelector('.form_caret');
+                            const form_menu = form_dropdown.querySelector('.form_menu');
+                            const form_options = form_dropdown.querySelectorAll('.form_menu li');
+                            const form_selected = form_dropdown.querySelector('.form_selected');
+
+                            form_select.addEventListener('click', () => {
+                                form_select.classList.toggle('form_select-clicked');
+                                form_caret.classList.toggle('form_caret-rotate');
+                                form_menu.classList.toggle('form_menu-open');
+                            });
+                            form_options.forEach(form_option => {
+                                form_option.addEventListener('click', () => {
+                                    form_selected.innerText = form_option.innerText;
+                                    form_select.classList.remove('form_select-clicked');
+                                    form_caret.classList.remove('form_caret-rotate');
+                                    form_menu.classList.remove('form_menu-open');
+                                    form_options.forEach(form_option => {
+                                        form_option.classList.remove('form_active');
+                                    });
+                                    form_option.classList.add('form_active');
+                                });
+                            });
+                        });
+                    </script>
+                </div>
+                <button type="button" class="Quote_button">Get a quote</button>
+            </div>
+        </section>
+</body>
+<footer>
+    <nav class="Footer">
+        <!-- NAVIGATION MENUS -->
+        <div class="footer-menu">
+            <p>This website was created by Manuel Marginean.</p>
+            <p>For documentation, please visit</p>
+            <p><a class="link" href="https://www.w3schools.com/html/">This link</a></p>
+        </div
+    </nav>
+</footer>
